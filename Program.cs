@@ -8,8 +8,8 @@ using ConsoleApp1.MODELS;
 
 HttpClient http_client = new HttpClient();
 
-string staging_har = await File.ReadAllTextAsync("C:\\Users\\JoelEvans\\Desktop\\tmp\\brasasclub-staging.azurewebsites.net.har");
-string prod_har = await File.ReadAllTextAsync("C:\\Users\\JoelEvans\\Desktop\\tmp\\brasasclub.com.har");
+string staging_har = await File.ReadAllTextAsync("brasasclub-staging.azurewebsites.net.har");
+string prod_har = await File.ReadAllTextAsync("brasasclub.com.har");
 
 var staging_page = JsonSerializer.Deserialize<ROOT>(staging_har);
 var prod_page = JsonSerializer.Deserialize<ROOT>(prod_har);
